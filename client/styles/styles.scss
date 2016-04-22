@@ -8,7 +8,15 @@ $secondary-color: color("teal", "lighten-1") !default;
 // import main scss file
 @import "{poetic:materialize-scss}/sass/materialize.scss";
 
+@import "{}/both/pages/home.scss";
+
+
+
 
 h4{
   font-family: roboto-thin;
+}
+
+.card-panel{
+  padding-bottom: 40px;
 }
