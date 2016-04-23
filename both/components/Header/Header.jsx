@@ -10,7 +10,7 @@ Header = React.createClass({
     return (
       <nav style={navStyle}>
         <div className="nav-wrapper">
-          <a href="/" className="brand-logo"><i className="material-icons perm_identity">perm_identity</i>bretth18.me</a>
+          <a href="/" className="brand-logo"><i className="fa fa-bolt" aria-hidden="true"/> bretth18</a>
           <ul className="right hide-on-med-and-down">
             <li><a href="/about">about</a></li>
             <li><a href="/contact">contact</a></li>

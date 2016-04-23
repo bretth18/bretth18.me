@@ -1,26 +1,32 @@
 import React from 'react';
 
 About = React.createClass({
+  buttonClick(){
+    FlowRouter.go('/contact');
+  },
   render(){
     return (
       <div className="container">
         <h4>about</h4>
-          <h4>Hello, I'm Brett</h4>
           <div className="divider"></div>
           <div className="col s12 m8 offset-m2 l6 offset-l3">
             <div className="card-panel grey lighten-5 z-depth-1" id="homeCard">
+              <div className="col s4">
+                <img src="https://cloud.githubusercontent.com/assets/955730/14763236/96605c2c-0944-11e6-96a4-eaf0a79d70bb.jpg" width="200" height="200" alt="" className="circle responsive-img" />
+              </div>
               <div className="row valign-wrapper">
-                <div className="col s2">
-                  <img src="https://pbs.twimg.com/profile_images/720845700666241025/_O8P_Dv_.jpg" alt="" className="circle responsive-img" />
-                </div>
-                <div className="col s10">
+                <div className="col s12">
                   <span className="black-text">
                     I'm a university student majoring in Computer Science, and a full-stack web/mobile developer. When I'm not busy with my own projects,
-                    I do freelance development work on the side.
+                    I do freelance development work on the side. I've been programming for over 6 years now, and have a developed passion for creating functional programs that look great.
+                    When I'm not writing code or brewing up startup ideas, I'm usually out hiking or taking photos.
+                    <li><p>I currently live and work in the greater San Francisco Bay Area.</p></li>
+                    <li><p>I have numerous projects that are looking for team members. Have an idea? Get in contact with me below, or on my Contact page</p></li>
+
                   </span>
                 </div>
               </div>
-              <button className="waves-effect waves-teal btn-flat blue-text right" href="/about">about me</button>
+              <button className="waves-effect waves-teal btn-flat blue-text right" href="/contact" onClick={this.buttonClick}>contact me</button>
             </div>
           </div>
           <div className="divider"></div>

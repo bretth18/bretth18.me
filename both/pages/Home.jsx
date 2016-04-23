@@ -10,7 +10,7 @@ Home = React.createClass({
           <div className="card-panel grey lighten-5 z-depth-1" id="homeCard">
             <div className="row valign-wrapper">
               <div className="col s2">
-                <img src="https://pbs.twimg.com/profile_images/720845700666241025/_O8P_Dv_.jpg" alt="" className="circle responsive-img" />
+                <img src="https://cloud.githubusercontent.com/assets/955730/14763236/96605c2c-0944-11e6-96a4-eaf0a79d70bb.jpg" alt="" className="circle responsive-img" />
               </div>
               <div className="col s10">
                 <span className="black-text">
