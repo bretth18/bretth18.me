@@ -30,7 +30,10 @@ Home = React.createClass({
                 <h5><i className="fa fa-code" aria-hidden="true"/> Web Development</h5>
                 <div className="section">
                   <blockquote>
-                    I create versite webapps using modern frameworks like Meteor.js, React.js, Node.js and more.
+                    I create versitile webapps using modern frameworks like Meteor.js, React.js, Node.js and more.
+                  </blockquote>
+                  <blockquote>
+                    I love designing clean, easy to use sites and responsive UI's, like the one you're using right now!
                   </blockquote>
 
                 </div>
@@ -39,6 +42,14 @@ Home = React.createClass({
             <div className="col s6">
               <div className="card-panel grey lighten-5 z-depth-1" id="githubCard">
               <h5><i className="fa fa-mobile" aria-hidden="true"/> Mobile Development</h5>
+              <div className="section">
+                <blockquote>
+                  I began programming by writing Java based Android apps in 2010, and have been developing my skill set since!
+                </blockquote>
+                <blockquote>
+                  I currently write mobile solutions for iOS in Swift and React-Native, along with a few Android Apps using React-Native.
+                </blockquote>
+              </div>
               </div>
             </div>
 
