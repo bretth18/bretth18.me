@@ -9,7 +9,7 @@ if(Meteor.isServer){
       sparky.transmissions.send({
         transmissionBody: {
           content: {
-            from: 'testing@sparkpostbox.com',
+            from: 'testing@sparkpostbox.com', // take in users email for from
             subject: 'Oh hey!',
             html:'<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>'
           },

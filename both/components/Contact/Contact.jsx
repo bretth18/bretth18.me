@@ -3,6 +3,10 @@ import Meteor from 'meteor/meteor';
 
 
 Contact = React.createClass({
+  onSubmit(e){
+
+  },
+
   render(){
 
     return (
@@ -15,7 +19,7 @@ Contact = React.createClass({
                   <h4>Contact me</h4>
                   <div className="divider"></div>
                   <div className="input-field col s6">
-                    <input placeholder="Placeholder" id="first_name" type="text" className="validate" />
+                    <input placeholder="" id="first_name" type="text" className="validate" />
                     <label for="first_name">First Name</label>
                   </div>
                   <div className="input-field col s6">
