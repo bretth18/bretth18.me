@@ -4,6 +4,16 @@ import Meteor from 'meteor/meteor';
 
 Contact = React.createClass({
   onSubmit(e){
+    // call server side sparkpost code to send email from form input
+    Meteor.call('sendEmail', first_name, function(error, result){
+      if(error){
+        console.log("error", error);
+      }
+      if(result){
+        console.log('it worked');
+        Materialize.toast('I am a toast!', 4000)
+      }
+    });
 
   },
 
@@ -42,7 +52,7 @@ Contact = React.createClass({
                         </div>
                       </div>
                     </form>
-                    <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <button className="btn waves-effect waves-light" type="submit" name="action" onClick={this.onSubmit}>Submit
                       <i className="material-icons right">send</i>
                     </button>
                   </div>
