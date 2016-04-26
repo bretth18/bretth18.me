@@ -1,6 +1,9 @@
 import React from 'react';
 
 Home = React.createClass({
+  doRoute(){
+    FlowRouter.go('/about');
+  },
   render() {
     return (
       <div className="container">
@@ -19,7 +22,7 @@ Home = React.createClass({
                 </span>
               </div>
             </div>
-            <button className="waves-effect waves-teal btn-flat blue-text right" href="/about">about me</button>
+            <button className="waves-effect waves-teal btn-flat blue-text right" href="/about" onClick={this.doRoute}>about me</button>
           </div>
         </div>
         <div className="divider"></div>

@@ -3,7 +3,7 @@ import Sparkpost from 'sparkpost';
 
 if(Meteor.isServer){
   Meteor.methods({
-    sendEmail:function(name){
+    sendEmail:function(subForm){
       // TODO: replace auth_token with env var before commit!
       var sparky = new SparkPost(process.env.SPARKPOST_AUTHKEY);
 
@@ -11,8 +11,8 @@ if(Meteor.isServer){
         transmissionBody: {
           content: {
             from: 'contact@mail.bretth18.me', // take in users email for from
-            subject: name +'contacted you!',
-            html:'<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>'
+            subject: subForm.email_val +'contacted you!',
+            html:'<html><body><p>{subForm.message_val}</p></body></html>'
           },
           recipients: [
             {address: 'bretth18@gmail.com'}

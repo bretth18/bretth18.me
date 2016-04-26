@@ -24,7 +24,7 @@ check
 ecmascript
 standard-minifier-css
 standard-minifier-js
-fourseven:scss
-poetic:materialize-scss
 kadira:flow-router
 fortawesome:fontawesome
+fourseven:scss
+poetic:materialize-scss
