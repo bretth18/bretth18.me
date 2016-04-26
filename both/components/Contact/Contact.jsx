@@ -1,5 +1,5 @@
 import React from 'react';
-import Meteor from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import $ from 'jquery';
 
 Contact = React.createClass({
@@ -25,20 +25,18 @@ Contact = React.createClass({
     };
 
     // call server side sparkpost code to send email from form input
-        // current state variables need to be called in this function referencing state of componenet
-    Meteor.call('sendEmail', subForm, function(error, result){
-      if(error){
+    // current state variables need to be called in this function referencing state of component
+    Meteor.call('sendEmail', subForm, function(err){
+      if(err){
         console.log("error", error);
         Materialize.toast('An error occured while sending your message: ' + error);
-      }
-      if(result){
-        console.log('it worked');
-        Materialize.toast('I am a toast!', 4000);
+      } else {
+        // console.log('it worked');
+        Materialize.toast('Message sent!', 4000);
+        FlowRouter.g('/contact');
       }
     });
-
   },
-
   render(){
     return (
     <div className="container">
@@ -48,29 +46,29 @@ Contact = React.createClass({
             <form className="col s12" onSubmit={this.onSubmit}>
                 <div className="row">
                     <div className="input-field col m6 s12">
-                        <input id="first_name" type="text" className="validate"/>
+                        <input id="firstName" type="text" className="validate"/>
                         <label for="first_name">First Name</label>
                     </div>
                     <div className="input-field col m6 s12">
-                        <input id="last_name" type="text" className="validate"/>
+                        <input id="lastName" type="text" className="validate"/>
                         <label for="last_name">Last Name</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field col m6 s12">
                         <i className="mdi-content-mail prefix"></i>
-                        <input id="email" type="email" className="validate" required/>
+                        <input id="emailVal" type="email" className="validate" required/>
                         <label for="email">Email</label>
                     </div>
                     <div className="input-field col m6 s12">
                         <i className="mdi-maps-store-mall-directory prefix"></i>
-                        <input id="company" type="text" className="validate"/>
+                        <input id="companyVal" type="text" className="validate"/>
                         <label for="company">Company</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field col s12">
-                      <textarea id="message" className="materialize-textarea"></textarea>
+                      <textarea id="messageVal" className="materialize-textarea"></textarea>
                       <label for="message">Message</label>
                     </div>
                 </div>

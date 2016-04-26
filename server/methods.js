@@ -1,5 +1,5 @@
-import Meteor from 'meteor/meteor';
-import Sparkpost from 'sparkpost';
+import { Meteor } from 'meteor/meteor';
+import SparkPost from 'sparkpost';
 
 if(Meteor.isServer){
   Meteor.methods({
@@ -11,8 +11,8 @@ if(Meteor.isServer){
         transmissionBody: {
           content: {
             from: 'contact@mail.bretth18.me', // take in users email for from
-            subject: subForm.email_val +'contacted you!',
-            html:'<html><body><p>{subForm.message_val}</p></body></html>'
+            subject: subForm.email_val +' contacted you!',
+            html:'<html><body><h4>Name:'+ subForm.first_name + ' ' + subForm.last_name + '</h4><div></div><h4>Company: ' + subForm.company_val + '<div></div><p> Text: ' + subForm.message_val + '</p><div></div><a href="mailto:' + subForm.email_val + '">Reply</a></body></html>'
           },
           recipients: [
             {address: 'bretth18@gmail.com'}
@@ -20,13 +20,17 @@ if(Meteor.isServer){
         }
       }, function(err, res) {
         if (err) {
-          console.log('Whoops! Something went wrong');
+          console.log('Whoops! Something went wrong sending an email');
           console.log(err);
         } else {
-          console.log('Woohoo! You just sent your first mailing!');
+          console.log('Message sent via sparkpost on server');
         }
       });
 
+    },
+
+    testMethod: function(){
+      console.log('returning value from the server');
     }
   });
 
