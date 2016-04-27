@@ -12,7 +12,7 @@ About = React.createClass({
           <div className="col s12 m8 offset-m2 l6 offset-l3">
             <div className="card-panel grey lighten-5 z-depth-1" id="homeCard">
               <div className="col s4">
-                <img src="https://cloud.githubusercontent.com/assets/955730/14763236/96605c2c-0944-11e6-96a4-eaf0a79d70bb.jpg" width="200" height="200" alt="" className="circle responsive-img" />
+                <img src="https://cloud.githubusercontent.com/assets/955730/14763236/96605c2c-0944-11e6-96a4-eaf0a79d70bb.jpg"  alt="" className="circle responsive-img" id="aboutImg" />
               </div>
               <div className="row valign-wrapper">
                 <div className="col s12">
@@ -32,7 +32,7 @@ About = React.createClass({
           <div className="divider"></div>
             <div className="row">
 
-              <div className="col s4">
+              <div className="col s6">
                 <div className="card-panel grey lighten-5 z-depth-1" id="githubCard">
                   <h5><i className="fa fa-code" aria-hidden="true"/> My Stack</h5>
                   <div className="section">
@@ -46,7 +46,7 @@ About = React.createClass({
                   </div>
                 </div>
               </div>
-              <div className="col s4">
+              <div className="col s6">
                 <div className="card-panel grey lighten-5 z-depth-1" id="githubCard">
                 <h5><i className="fa fa-hand-lizard-o" aria-hidden="true"/> Links</h5>
                 <div className="section">

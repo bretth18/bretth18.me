@@ -28,8 +28,7 @@ Portfolio = React.createClass({
                 <span className="card-title">EmailAI</span>
               </div>
               <div className="card-content">
-                <p>emailAssistant (or emailAI) is currently a backend service that can be used to proofread emails, essays, etc.
-Our platform analyzes emotional context used within text and returns the analytical results to the user.</p>
+                <p>emailAssistant (or emailAI) is currently a backend service that can be used to proofread emails, essays, etc.</p>
               </div>
               <div className="card-action">
                 <a href="https://github.com/bretth18/EmailAI">GitHub</a>
